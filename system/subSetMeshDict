@@ -1,0 +1,35 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \    /   O peration     | Website:  https://openfoam.org
+    \  /    A nd           | Version:  12
+     \/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    object      subsetMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Name of the cellSet to use
+set             cut1;
+
+// Type of the subset
+type            cell;
+
+// What to do with subset
+action          delete;
+
+// Patches to create from subset
+patches
+{
+    // Create a wall patch for the cut faces
+    obstacle
+    {
+        type            wall;
+    }
+}
+
+// ************************************************************************* //

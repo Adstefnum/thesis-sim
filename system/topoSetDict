@@ -1,0 +1,172 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \    /   O peration     | Website:  https://openfoam.org
+    \  /    A nd           | Version:  12
+     \/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+actions
+(
+    // Create cellSets for each cut - Position 1
+    {
+        name    cut1;
+        type    cellSet;
+        action  new;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.25 0.075 -0.01) (0.26 0.1 0.01);  // Top cut
+        }
+    }
+    {
+        name    cut1;
+        type    cellSet;
+        action  add;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.25 0 -0.01) (0.26 0.025 0.01);    // Bottom cut
+        }
+    }
+    // Position 2
+    {
+        name    cut1;
+        type    cellSet;
+        action  add;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.55 0.075 -0.01) (0.56 0.1 0.01);  // Top cut
+        }
+    }
+    {
+        name    cut1;
+        type    cellSet;
+        action  add;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.55 0 -0.01) (0.56 0.025 0.01);    // Bottom cut
+        }
+    }
+    // Position 3
+    {
+        name    cut1;
+        type    cellSet;
+        action  add;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.85 0.075 -0.01) (0.86 0.1 0.01);  // Top cut
+        }
+    }
+    {
+        name    cut1;
+        type    cellSet;
+        action  add;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (0.85 0 -0.01) (0.86 0.025 0.01);    // Bottom cut
+        }
+    }
+    // Position 4
+    {
+        name    cut1;
+        type    cellSet;
+        action  add;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (1.15 0.075 -0.01) (1.16 0.1 0.01);  // Top cut
+        }
+    }
+    {
+        name    cut1;
+        type    cellSet;
+        action  add;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (1.15 0 -0.01) (1.16 0.025 0.01);    // Bottom cut
+        }
+    }
+    // Position 5
+    {
+        name    cut1;
+        type    cellSet;
+        action  add;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (1.45 0.075 -0.01) (1.46 0.1 0.01);  // Top cut
+        }
+    }
+    {
+        name    cut1;
+        type    cellSet;
+        action  add;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (1.45 0 -0.01) (1.46 0.025 0.01);    // Bottom cut
+        }
+    }
+    // Position 6
+    {
+        name    cut1;
+        type    cellSet;
+        action  add;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (1.75 0.075 -0.01) (1.76 0.1 0.01);  // Top cut
+        }
+    }
+    {
+        name    cut1;
+        type    cellSet;
+        action  add;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (1.75 0 -0.01) (1.76 0.025 0.01);    // Bottom cut
+        }
+    }
+    // Position 7
+    {
+        name    cut1;
+        type    cellSet;
+        action  add;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (2.05 0.075 -0.01) (2.06 0.1 0.01);  // Top cut
+        }
+    }
+    {
+        name    cut1;
+        type    cellSet;
+        action  add;
+        source  boxToCell;
+        sourceInfo
+        {
+            box (2.05 0 -0.01) (2.06 0.025 0.01);    // Bottom cut
+        }
+    }
+    {
+        action invert;
+        type cellSet;
+        name cut1;
+    }
+);
+
+// ************************************************************************* //
