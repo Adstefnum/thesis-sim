@@ -10,3 +10,4 @@ rm -f log.topoSet
 rm -f log.subsetMesh
 rm -f log.setFields
 rm -f log.decomposePar
+rm -rf processor*/

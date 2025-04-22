@@ -21,13 +21,13 @@ flameFoamCoeffs
     Tu false;
     debug false;
 
-    X_H2_0 0.225;
-    X_CO_0 0;
-    X_CO2 0;
-    X_H2O 0;
+   X_H2_0    0.0152;  // Mass fraction for H2
+X_O2_0    0.2315;  // Mass fraction for O2
+X_N2_0    0.7533;  // Mass fraction for N2 (balance)
 
-    Y_H2_99 0.0626;
-    Y_CO_99 0;
+Y_H2_99    0.0626;  // Mass fraction for H2
+Y_O2_99    0;  // Mass fraction for O2
+Y_N2_99    0;  // Mass fraction for N2 (balance)
 
     reactionRate DDT;
     laminarBurningVelocity hydrogenAirPower;
