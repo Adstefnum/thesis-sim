@@ -1,19 +1,21 @@
 #!/bin/sh
 cd ${0%/*} || exit 1    # Run from this directory
 
-# Source tutorial run functions
+# Source run functions
 . $WM_PROJECT_DIR/bin/tools/RunFunctions
 
-# Remove old polyMesh
-rm -rf constant/polyMesh
+echo "0 is moved to 0.bak!"
+rm -rf 0.bak
+mv -f 0 0.bak
 
-# Create base mesh
+touch ${PWD##*/}.foam
+
 runApplication blockMesh
-
-# Create cell sets for the cuts
 runApplication topoSet
-
-# Delete the cells in the cuts to create the obstacles
 runApplication subsetMesh cut1 -patch walls -overwrite
-
-#------------------------------------------------------------------------------ 
+cp -r 0.bak 0
+# runApplication extrudeMesh
+# runApplication createPatch -overwrite
+# cp -r 0.wedge 0
+# runApplication setFields
+# runApplication renumberMesh -overwrite

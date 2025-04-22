@@ -13,7 +13,16 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     simpleFoam;
+application     foamRun;
+
+solver          multicomponentFluid;
+
+libs
+(
+  "flameFoam-12.2.0-DDT-fixed-p9.so"
+);
+
+
 
 startFrom       startTime;
 
