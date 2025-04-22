@@ -26,13 +26,13 @@ thermoType
 }
 
 // Initial mass fractions for H2-air mixture (22.5% H2 by volume)
-X_H2    0.0152;  // Mass fraction for H2
-X_O2    0.2315;  // Mass fraction for O2
-X_N2    0.7533;  // Mass fraction for N2 (balance)
+   X_H2_0    0.0152;  // Mass fraction for H2
+X_O2_0    0.2315;  // Mass fraction for O2
+X_N2_0    0.7533;  // Mass fraction for N2 (balance)
 
-Y_H2    0.0626;  // Mass fraction for H2
-Y_O2    0;  // Mass fraction for O2
-Y_N2    0;  // Mass fraction for N2 (balance)
+Y_H2_99    0.0626;  // Mass fraction for H2
+Y_O2_99    0;  // Mass fraction for O2
+Y_N2_99    0;  // Mass fraction for N2 (balance)
 
 inertSpecie N2;
 
