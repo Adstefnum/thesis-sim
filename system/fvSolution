@@ -1,0 +1,109 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format          ascii;
+    class           dictionary;
+    object          fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    "pcorr.*"
+    {
+        solver          PCG;
+        preconditioner
+        {
+            preconditioner  GAMG;
+            tolerance       1e-5;
+            relTol          0;
+            smoother        DICGaussSeidel;
+            cacheAgglomeration no;
+        }
+
+        tolerance       1e-05;
+        relTol          0;
+        maxIter         100;
+    }
+    "(rhoFinal|rho)"
+    {
+        solver          diagonal; // tiesioginis sprendimas, nes lygtis solve(fvm::ddt(rho) + fvc::div(phi)) yra explicit
+    }
+    not_p
+    {
+        solver          GAMG;
+        smoother        GaussSeidel;
+        tolerance       1e-07;
+        relTol          0.0005;
+        maxIter         50;
+    }
+    "(U|Yi|h|k|epsilon|omega|Xi|tau)"
+    {
+        $not_p          ;
+    }
+    "(U|Yi|h|k|epsilon|omega|Xi|tau)Final"
+    {
+        $not_p          ;
+        tolerance       1e-07;
+        relTol          0;
+    }
+    "(p_rgh|p)"
+    {
+        $not_p          ;
+        tolerance       1e-05;
+        relTol          0.01;
+        minIter         1;
+    }
+    "(p_rgh|p)Final"
+    {
+        $p_rgh          ;
+        relTol          0;
+    }
+    "Ii.*"
+    {
+        solver                  GAMG;
+        tolerance               1e-6;
+        relTol                  0.01;
+        smoother                symGaussSeidel;
+        maxIter                 10;
+        nPostSweeps             2;
+    }
+    "G.*"
+    {
+        $p_rgh;
+        tolerance       1e-06;
+        relTol          0.1;
+    }
+}
+
+PIMPLE
+{
+    transonic yes;
+
+    nOuterCorrectors 20;
+    turbOnFinalIterOnly yes;
+    momentumPredictor no;
+    nCorrectors     1;
+    nNonOrthogonalCorrectors 2;
+    outerCorrectorResidualControl
+    {
+        all
+        {
+            relTol      0;
+            tolerance   1e-4;
+        }
+        "(Xi|U|Yi|h|p_rgh|p|k|epsilon|omega)"
+        {
+            $all        ;
+        }
+    }
+}
+
+
+// ************************************************************************* //

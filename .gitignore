@@ -1,3 +1,4 @@
 log.*
 0.bak/
 processor*/
+constant/ADT/

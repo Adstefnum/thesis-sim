@@ -17,5 +17,5 @@ cp -r 0.bak 0
 # runApplication extrudeMesh
 # runApplication createPatch -overwrite
 # cp -r 0.wedge 0
-# runApplication setFields
+runApplication setFields
 # runApplication renumberMesh -overwrite
