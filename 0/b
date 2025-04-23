@@ -7,16 +7,16 @@
 \*---------------------------------------------------------------------------*/
 FoamFile
 {
-    format      ascii;
+    format      binary;
     class       volScalarField;
     location    "0";
-    object      Y.O2;
+    object      b;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 0 0 0 0 0 0];
+dimensions      [];
 
-internalField   uniform 0.2315;  // Initial mass fraction for species O2
+internalField   uniform 1;
 
 boundaryField
 {
@@ -24,10 +24,16 @@ boundaryField
     {
         type            zeroGradient;
     }
-    frontAndBack
+    front
     {
-        type            empty;
+        type            wedge;
+    }
+    back
+    {
+        type            wedge;
     }
 }
 
+
 // ************************************************************************* //
+

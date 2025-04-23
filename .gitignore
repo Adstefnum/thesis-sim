@@ -2,3 +2,4 @@ log.*
 0.bak/
 processor*/
 constant/ADT/
+flameFoam.region0.combustionInfo
