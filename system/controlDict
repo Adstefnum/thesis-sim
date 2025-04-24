@@ -30,13 +30,15 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         1000;
+endTime         0.15;
 
-deltaT          1;
+deltaT          1e-6;
 
-writeControl    timeStep;
+maxDeltaT       1e-6;
 
-writeInterval   100;
+writeControl    adjustableRunTime;
+
+writeInterval   5e-5;
 
 purgeWrite      0;
 

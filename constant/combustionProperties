@@ -19,7 +19,7 @@ combustionModel flameFoam;
 flameFoamCoeffs
 {
     Tu false;
-    debug false;
+    debug true;
 
    X_H2_0    0.0152;  // Mass fraction for H2
 X_O2_0    0.2315;  // Mass fraction for O2
@@ -28,6 +28,13 @@ X_N2_0    0.7533;  // Mass fraction for N2 (balance)
 Y_H2_99    0.0626;  // Mass fraction for H2
 Y_O2_99    0;  // Mass fraction for O2
 Y_N2_99    0;  // Mass fraction for N2 (balance)
+
+ // Laminar burning velocity parameters
+    SL_ref          2.1;        // Reference laminar burning velocity [m/s] for 22.5% H2
+    T_ref           298;        // Reference temperature [K]
+    p_ref           101325;     // Reference pressure [Pa]
+    alpha_T         1.4;        // Temperature exponent
+    beta_p          -0.4;       // Pressure exponent
 
     reactionRate DDT;
     laminarBurningVelocity hydrogenAirPower;
