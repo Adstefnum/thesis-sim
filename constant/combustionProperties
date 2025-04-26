@@ -19,7 +19,7 @@ combustionModel flameFoam;
 flameFoamCoeffs
 {
     Tu false;
-    debug true;
+    debug false;
 
     X_H2_0 0.225;
 X_CO_0 0.0;
