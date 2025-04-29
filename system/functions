@@ -1,0 +1,38 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  dev
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      functions;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+#includeFunc    probes
+(
+  funcName=p,
+  p,
+  points=
+    (
+      (0.5 0.05 0)    // Near inlet
+      (1.0 0.05 0)    // 
+      (1.5 0.05 0)    // 
+      (2.0 0.05 0)    // 
+      (2.5 0.05 0)    // 
+      (3.0 0.05 0)    // 
+      (3.5 0.05 0)    // 
+      (4.0 0.05 0)    // 
+      (4.5 0.05 0)    // Near outlet
+    )
+)
+
+#includeFunc    graphCell(funcName=line1, c, start=(0.1 0.05 0), end=(5.0 0.05 0), axis=x, writeControl=adjustableRunTime, writeInterval=1e-6)
+#includeFunc    graphCell(funcName=line2, c, start=(0.5 0.05 0), end=(4.5 0.05 0), axis=x, writeControl=adjustableRunTime, writeInterval=1e-6)
+#includeFunc    graphCell(funcName=line3, c, start=(1.0 0.05 0), end=(4.0 0.05 0), axis=x, writeControl=adjustableRunTime, writeInterval=1e-6)
+
+// ************************************************************************* //
