@@ -1,0 +1,12 @@
+size 18 10
+begin graph
+	scale auto
+	axis grid
+	ticks lstyle 2 color gray
+	data ./postProcessing\processed_ignitions_0.0001.txt
+	d1 color black key ignitions line
+	!exp
+	key pos br
+	xtitle "Height, m"
+	ytitle "Arrival time, s"
+end graph
