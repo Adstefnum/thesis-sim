@@ -20,15 +20,15 @@ FoamFile
     {
         type            wall;
         inGroups        List<word> 1(wall);
-        nFaces          1120;
-        startFace       9560;
+        nFaces          3524;
+        startFace       65902;
     }
     frontAndBack
     {
         type            empty;
         inGroups        List<word> 1(empty);
-        nFaces          10120;
-        startFace       10680;
+        nFaces          67664;
+        startFace       69426;
     }
 )
 

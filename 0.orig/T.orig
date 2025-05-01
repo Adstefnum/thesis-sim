@@ -8,36 +8,26 @@
 FoamFile
 {
     format      ascii;
-    class       dictionary;
-    location    "constant";
-    object      combustionProperties;
+    class       volScalarField;
+    location    "0";
+    object      T;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-combustionModel flameFoam;
+dimensions      [0 0 0 1 0 0 0];
 
-flameFoamCoeffs
+internalField   uniform 293;
+
+boundaryField
 {
-    Tu false;
-    debug false;
-
-    X_H2_0 0.225;
-    X_CO_0 0.0;
-    X_CO2 0.0;
-    X_H2O 0.0;
-
-    Y_H2_99    0.0;
-
-    reactionRate DDT;
-    laminarBurningVelocity hydrogenAirPower;
-    wrinklingFactor wFTransport;
-    autoIgnition aITransport;
-
-    H0 1.1996e8;
-
-    Le 0.467;
+    walls
+    {
+        type            zeroGradient;
+    }
+    frontAndBack
+    {
+        type            empty;
+    }
 }
 
-
 // ************************************************************************* //
-

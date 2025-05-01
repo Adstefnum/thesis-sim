@@ -23,7 +23,7 @@ actions
         source  boxToCell;
         sourceInfo
         {
-            box (0.25 0.075 -0.01) (0.26 0.1 0.01);  // Top cut
+            box (0.25 0.051 -0.01) (0.26 0.1 0.01);  // Top cut
         }
     }
     {
@@ -33,7 +33,7 @@ actions
         source  boxToCell;
         sourceInfo
         {
-            box (0.25 0 -0.01) (0.26 0.025 0.01);    // Bottom cut
+            box (0.25 0 -0.01) (0.26 0.009 0.01);    // Bottom cut
         }
     }
     // Position 2
@@ -44,7 +44,7 @@ actions
         source  boxToCell;
         sourceInfo
         {
-            box (0.55 0.075 -0.01) (0.56 0.1 0.01);  // Top cut
+            box (0.55 0.051 -0.01) (0.56 0.1 0.01);  // Top cut
         }
     }
     {
@@ -54,7 +54,7 @@ actions
         source  boxToCell;
         sourceInfo
         {
-            box (0.55 0 -0.01) (0.56 0.025 0.01);    // Bottom cut
+            box (0.55 0 -0.01) (0.56 0.009 0.01);    // Bottom cut
         }
     }
     // Position 3
@@ -65,7 +65,7 @@ actions
         source  boxToCell;
         sourceInfo
         {
-            box (0.85 0.075 -0.01) (0.86 0.1 0.01);  // Top cut
+            box (0.85 0.051 -0.01) (0.86 0.1 0.01);  // Top cut
         }
     }
     {
@@ -75,7 +75,7 @@ actions
         source  boxToCell;
         sourceInfo
         {
-            box (0.85 0 -0.01) (0.86 0.025 0.01);    // Bottom cut
+            box (0.85 0 -0.01) (0.86 0.009 0.01);    // Bottom cut
         }
     }
     // Position 4
@@ -86,7 +86,7 @@ actions
         source  boxToCell;
         sourceInfo
         {
-            box (1.15 0.075 -0.01) (1.16 0.1 0.01);  // Top cut
+            box (1.15 0.051 -0.01) (1.16 0.1 0.01);  // Top cut
         }
     }
     {
@@ -96,7 +96,7 @@ actions
         source  boxToCell;
         sourceInfo
         {
-            box (1.15 0 -0.01) (1.16 0.025 0.01);    // Bottom cut
+            box (1.15 0 -0.01) (1.16 0.009 0.01);    // Bottom cut
         }
     }
     // Position 5
@@ -107,7 +107,7 @@ actions
         source  boxToCell;
         sourceInfo
         {
-            box (1.45 0.075 -0.01) (1.46 0.1 0.01);  // Top cut
+            box (1.45 0.051 -0.01) (1.46 0.1 0.01);  // Top cut
         }
     }
     {
@@ -117,7 +117,7 @@ actions
         source  boxToCell;
         sourceInfo
         {
-            box (1.45 0 -0.01) (1.46 0.025 0.01);    // Bottom cut
+            box (1.45 0 -0.01) (1.46 0.009 0.01);    // Bottom cut
         }
     }
     // Position 6
@@ -128,7 +128,7 @@ actions
         source  boxToCell;
         sourceInfo
         {
-            box (1.75 0.075 -0.01) (1.76 0.1 0.01);  // Top cut
+            box (1.75 0.051 -0.01) (1.76 0.1 0.01);  // Top cut
         }
     }
     {
@@ -138,7 +138,7 @@ actions
         source  boxToCell;
         sourceInfo
         {
-            box (1.75 0 -0.01) (1.76 0.025 0.01);    // Bottom cut
+            box (1.75 0 -0.01) (1.76 0.009 0.01);    // Bottom cut
         }
     }
     // Position 7
@@ -149,7 +149,7 @@ actions
         source  boxToCell;
         sourceInfo
         {
-            box (2.05 0.075 -0.01) (2.06 0.1 0.01);  // Top cut
+            box (2.05 0.051 -0.01) (2.06 0.1 0.01);  // Top cut
         }
     }
     {
@@ -159,7 +159,7 @@ actions
         source  boxToCell;
         sourceInfo
         {
-            box (2.05 0 -0.01) (2.06 0.025 0.01);    // Bottom cut
+            box (2.05 0 -0.01) (2.06 0.009 0.01);    // Bottom cut
         }
     }
     {

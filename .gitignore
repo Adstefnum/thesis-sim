@@ -4,3 +4,4 @@ processor*/
 constant/ADT/
 flameFoam.region0.combustionInfo
 postProcessing/
+*.pdf

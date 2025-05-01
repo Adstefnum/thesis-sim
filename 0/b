@@ -7,14 +7,14 @@
 \*---------------------------------------------------------------------------*/
 FoamFile
 {
-    format      binary;
+    format      ascii;
     class       volScalarField;
     location    "0";
     object      b;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 0 0 0 0 0 0];
+dimensions      [];
 
 internalField   uniform 1;
 
@@ -24,16 +24,11 @@ boundaryField
     {
         type            zeroGradient;
     }
-    front
+    frontAndBack
     {
-        type            wedge;
-    }
-    back
-    {
-        type            wedge;
+        type            empty;
     }
 }
 
 
 // ************************************************************************* //
-
