@@ -24,7 +24,7 @@ regions
         fieldValues
         (
             volScalarFieldValue c 1
-            volScalarFieldValue T 2000
+            volScalarFieldValue T 1700 
         );
     }
 );
