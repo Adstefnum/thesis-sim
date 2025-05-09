@@ -5,3 +5,6 @@ constant/ADT/
 flameFoam.region0.combustionInfo
 postProcessing/
 *.pdf
+*.foam
+*.gle
+*.pvsm
