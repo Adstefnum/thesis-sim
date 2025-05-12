@@ -8,3 +8,4 @@ postProcessing/
 *.foam
 *.gle
 *.pvsm
+constant/polyMesh/

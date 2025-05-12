@@ -33,20 +33,16 @@ FoamFile
     )
 )
 
-// Vertical sampling lines at different x-positions
-#includeFunc    graphCell(funcName=vert1, c, start=(0.5 0 0), end=(0.5 0.06 0), axis=y, writeControl=adjustableRunTime, writeInterval=1e-5)
-#includeFunc    graphCell(funcName=vert2, c, start=(1.0 0 0), end=(1.0 0.06 0), axis=y, writeControl=adjustableRunTime, writeInterval=1e-5)
-#includeFunc    graphCell(funcName=vert3, c, start=(1.5 0 0), end=(1.5 0.06 0), axis=y, writeControl=adjustableRunTime, writeInterval=1e-5)
-#includeFunc    graphCell(funcName=vert4, c, start=(2.0 0 0), end=(2.0 0.06 0), axis=y, writeControl=adjustableRunTime, writeInterval=1e-5)
-#includeFunc    graphCell(funcName=vert5, c, start=(2.5 0 0), end=(2.5 0.06 0), axis=y, writeControl=adjustableRunTime, writeInterval=1e-5)
-#includeFunc    graphCell(funcName=vert6, c, start=(3.0 0 0), end=(3.0 0.06 0), axis=y, writeControl=adjustableRunTime, writeInterval=1e-5)
-#includeFunc    graphCell(funcName=vert7, c, start=(3.5 0 0), end=(3.5 0.06 0), axis=y, writeControl=adjustableRunTime, writeInterval=1e-5)
-#includeFunc    graphCell(funcName=vert8, c, start=(4.0 0 0), end=(4.0 0.06 0), axis=y, writeControl=adjustableRunTime, writeInterval=1e-5)
-#includeFunc    graphCell(funcName=vert9, c, start=(4.5 0 0), end=(4.5 0.06 0), axis=y, writeControl=adjustableRunTime, writeInterval=1e-5)
-
-// Horizontal sampling lines at different y-positions
-#includeFunc    graphCell(funcName=horiz1, c, start=(0 0.01 0), end=(5.1 0.01 0), axis=x, writeControl=adjustableRunTime, writeInterval=1e-5)
-#includeFunc    graphCell(funcName=horiz2, c, start=(0 0.03 0), end=(5.1 0.03 0), axis=x, writeControl=adjustableRunTime, writeInterval=1e-5)
-#includeFunc    graphCell(funcName=horiz3, c, start=(0 0.05 0), end=(5.1 0.05 0), axis=x, writeControl=adjustableRunTime, writeInterval=1e-5)
+// Sampling lines at different y-positions
+#includeFunc    graphCell(funcName=line1, c, start=(0 0.01 0), end=(5.1 0.01 0), axis=x, writeControl=adjustableRunTime, writeInterval=1e-5)
+#includeFunc    graphCell(funcName=line2, c, start=(0 0.02 0), end=(5.1 0.02 0), axis=x, writeControl=adjustableRunTime, writeInterval=1e-5)
+#includeFunc    graphCell(funcName=line3, c, start=(0 0.03 0), end=(5.1 0.03 0), axis=x, writeControl=adjustableRunTime, writeInterval=1e-5)
+#includeFunc    graphCell(funcName=line4, c, start=(0 0.04 0), end=(5.1 0.04 0), axis=x, writeControl=adjustableRunTime, writeInterval=1e-5)
+#includeFunc    graphCell(funcName=line5, c, start=(0 0.05 0), end=(5.1 0.05 0), axis=x, writeControl=adjustableRunTime, writeInterval=1e-5)
+#includeFunc    graphCell(funcName=line6, c, start=(0 0.015 0), end=(5.1 0.015 0), axis=x, writeControl=adjustableRunTime, writeInterval=1e-5)
+#includeFunc    graphCell(funcName=line7, c, start=(0 0.025 0), end=(5.1 0.025 0), axis=x, writeControl=adjustableRunTime, writeInterval=1e-5)
+#includeFunc    graphCell(funcName=line8, c, start=(0 0.035 0), end=(5.1 0.035 0), axis=x, writeControl=adjustableRunTime, writeInterval=1e-5)
+#includeFunc    graphCell(funcName=line9, c, start=(0 0.045 0), end=(5.1 0.045 0), axis=x, writeControl=adjustableRunTime, writeInterval=1e-5)
+#includeFunc    graphCell(funcName=line10, c, start=(0 0.055 0), end=(5.1 0.055 0), axis=x, writeControl=adjustableRunTime, writeInterval=1e-5)
 
 // ************************************************************************* //
